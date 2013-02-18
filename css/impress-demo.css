@@ -290,7 +290,7 @@ padding: 40px;
 }
 
 #title h1 {
-    font-size: 80px;
+    font-size: 70px;
 	text-align: center;
 
     -webkit-transform: translateZ(50px);
@@ -300,10 +300,18 @@ padding: 40px;
     transform:         translateZ(50px);
 }
 
-#title .footnote {
-    font-size: 40px;
-	padding-top: 30px;
+#pagecounter {
+	position: absolute; 
+	right: 80px;
+	bottom: 100px;
+	width: 100%;
 	text-align: right;
+    font-family: 'PT Serif', georgia, serif;
+}
+
+#title .footnote {
+	padding-top: 100px;
+    font-size: 40px;
 }
 
 /*

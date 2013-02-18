@@ -9,6 +9,7 @@
     <meta name="description" content="Bachelor Thesis über Integration von Xtext in einen bestehenden Softwareentwicklungsprozess" />
     <meta name="author" content="Christopher Klein" />
     <link href="fonts/fonts.css" rel="stylesheet" />
+	<script src="js/jquery-1.9.1.min.js"></script>
     <link href="css/impress-demo.css" rel="stylesheet" />
     
     <link rel="shortcut icon" href="favicon.png" />
@@ -46,10 +47,15 @@
     right around the corner of this tag ;)
     
 -->
+
 <div id="impress">
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="1">
-        <h1>Integration von Xtext in einen bestehenden Softwareentwicklungsprozess</h1>
-        <span class="footnote">Christopher Klein, NeosIT</span>
+	
+    <div id="title" class="step no-count" data-x="0" data-y="0" data-scale="1">
+		<h1>Integration von Xtext in einen bestehenden Softwareentwicklungs-prozess</h1>
+       <p class="footnote">
+			Kolloquium Bachelor Thesis<br />
+			Christopher Klein, NeosIT
+		</p>
     </div>
 	
     <!--
@@ -69,7 +75,7 @@
         It will not be rotated or scaled.
         
     -->
-    <div id="inhalt" class="step slide" data-x="0" data-y="1000"  data-transition-duration="0">
+    <div id="inhalt" class="step slide count" data-x="0" data-y="1000"  data-transition-duration="0">
 		<h1>Inhalt</h1>
 		<ul>
 			<li>Ausgangssituation</li>
@@ -81,8 +87,9 @@
 		</ul>
     </div>
 
-    <div class="step slide" data-x="-2500" data-y="-1500">
+    <div class="step slide count" data-x="-2500" data-y="-1500">
 		<ul>
+			<li>NeosIT spezialisiert auf Management-Reporting Anwendungen</li>
 			<li>Software-Projekte bei NeosIT ähneln sich
 				<ul>
 					<li>Thematik</li>
@@ -93,81 +100,94 @@
 		</ul>
     </div>
 
-    <div class="step" data-x="-1500" data-y="-1500">
+    <div class="step count" data-x="-1500" data-y="-1500">
         <p>Warum die Gemeinsamkeiten nicht abstrahieren?</p>
 		<img src="img/affe.jpg" width="500" />
     </div>
 
-    <div class="step" data-x="0" data-y="-1500">
+    <div class="step count" data-x="0" data-y="-1500">
 		<b>Erste Erfahrungen in Code-Generierung mit Xtext</b>
     </div>
 	
-    <div class="step" data-x="1000" data-y="-1500">
+    <div class="step count" data-x="1000" data-y="-1500">
 		<p>Generierung von <strong>Datenbankzugriffsschicht</strong> und <strong>Entitäten</strong> in C#</p>
     </div>
 	
-	<div class="step slide" data-x="2000" data-y="-1500">
+	<div class="step slide count" data-x="2000" data-y="-1500">
 		<img src="img/sample-dsl.png" width="500" />
+		<p>Erster Erfahrung mit Xtext</p>
 	</div>
 
+	<div class="step slide count" data-x="3000" data-y="-1500">
+		<img src="img/sample-dsl-result.png" width="500" />
+		<p>Generierte Entitäten und Datenzugriffsschicht</p>
+	</div>
 
-    <div class="step" data-x="-2500" data-y="500" data-rotate="300" data-scale="1">
-		<b>Die Anforderungen</b>
+    <div class="step count" data-x="-2500" data-y="500" data-rotate="300" data-scale="1">
+		<b>Die Anforderungen an eine neue DSL</b>
     </div>
 
-    <div class="step" data-x="-2000" data-y="1325" data-rotate="300" data-scale="1">
+    <div class="step count" data-x="-2000" data-y="1325" data-rotate="300" data-scale="1">
 		<b>Eine DSL für beliebige Programmiersprachen/Artefakte</b>
     </div>
 
-    <div class="step" data-x="-1800" data-y="1325" data-rotate="300" data-scale="1">
-		<b>Abbilden von Prozesse und Transitionen</b>
+    <div class="step count" data-x="-1800" data-y="1325" data-rotate="300" data-scale="1">
+		<b>Abbilden von Domänen, Prozessen und Transitionen</b>
     </div>
 	
-    <div class="step" data-x="-1600" data-y="1325" data-rotate="300" data-scale="1">
+    <div class="step count" data-x="-1600" data-y="1325" data-rotate="300" data-scale="1">
 		<b>Einfache Bedienung für den Anwender</b>
     </div>
 
-    <div class="step" data-x="-1400" data-y="1325" data-rotate="300" data-scale="1">
-		<b>Aufbau von Wissen als Dienstleistung?</b>
+    <div class="step count" data-x="-1400" data-y="1325" data-rotate="300" data-scale="1">
+		<b>Einfache Erweiterung durch den Entwickler</b>
     </div>
 
-    <div class="step" data-x="1000" data-y="0" data-rotate="300" data-scale="1">
+    <div class="step count" data-x="1000" data-y="0" data-rotate="300" data-scale="1">
 		<b>Spezifizierung der DSL</b>
     </div>
 
-    <div class="step" data-x="1500" data-y="0" data-rotate="300"  data-scale="1">
+    <div class="step count" data-x="1500" data-y="0" data-rotate="300"  data-scale="1">
 		<b>Welche Sprachkonzepte sind dem Anwender bekannt?</b>
     </div>
-	
-    <div class="step" data-x="1700" data-y="0" data-rotate="300"  data-scale="1">
-		<b>Welche Sprachkonzepte fühlen sich <em>richtig</em> an?</b>
+
+    <div class="step slide count" data-x="1500" data-y="0" data-z="-1000" data-rotate="300"  data-scale="1">
+		<img src="img/sprachkonzepte.png" width="500" />
     </div>
 	
-    <div class="step" data-x="2500" data-y="0" data-scale="1">
+	<div class="step count" data-x="1700" data-y="0" data-rotate="300"  data-scale="1">
+		<b>Welche Grammatik fühlt sich <em>richtig</em> an?</b>
+    </div>
+
+    <div class="step slide count" data-x="1700" data-y="0" data-z="-2000" data-rotate="300"  data-scale="1">
+		<img src="img/grammatik.png" width="500" />
+    </div>
+	
+    <div class="step count" data-x="2500" data-y="0" data-scale="1">
 		<img src="img/nachdenkliche-seerobbe.png" />
     </div>
 
-    <div class="step" data-x="1000" data-y="1000" data-scale="1">
+    <div class="step count" data-x="1000" data-y="1000" data-scale="1">
 		<b>Definition der DSL in Xtext</b>
     </div>
 
-    <div class="step" data-x="2000" data-y="1000" data-scale="1">
+    <div class="step count" data-x="2000" data-y="1000" data-scale="1">
 		<img src="img/rapid-xtext.png" width="800" />
     </div>
 
-    <div class="step" data-x="3000" data-y="1000" data-scale="1">
-		<b>Praktisches Einsetzen von Rapid</b>
+    <div class="step count" data-x="3000" data-y="1000" data-scale="1">
+		<b>Rapid in der Praxis</b>
     </div>
 
-	 <div class="step" data-x="4000" data-y="1000" data-scale="1">
+	 <div class="step count" data-x="4000" data-y="1000" data-scale="1">
 		<img src="img/forum-app-example.png" width="800"/>
     </div>
 
-    <div class="step" data-x="-2500" data-y="2500" data-scale="1">
+    <div class="step count" data-x="-2500" data-y="2500" data-scale="1">
 		<b>Support für mehrere Generatoren</b>
     </div>
 	
-    <div class="step" data-x="-1500" data-y="2500" data-scale="1">
+    <div class="step count" data-x="-1500" data-y="2500" data-scale="1">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:se="http://svg-edit.googlecode.com" width="100%" height="480" preserveAspectRatio="xMidYMin meet">
  <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
  <defs>
@@ -186,10 +206,10 @@
  </defs>
  <g transform="scale(1.4, 1.4)">
   <title>Layer 1</title>
-  <polyline marker-end="url(#se_marker_end_svg_21)" se:connector="svg_6 svg_11" fill="none" stroke-width="2" stroke="#000000" points="302.93 127 302.537 205.5 302.145 284" id="svg_21"/>
-  <polyline marker-end="url(#se_marker_end_svg_20)" se:connector="svg_5 svg_7" fill="none" stroke-width="2" stroke="#000000" points="353.122 137 381.591 151.5 410.061 166" id="svg_20"/>
-  <polyline marker-end="url(#se_marker_end_svg_19)" se:connector="svg_2 svg_5" fill="none" stroke-width="2" stroke="#000000" points="305.655 59.5 305.734 71.75 305.813 84" id="svg_19"/>
-  <polyline marker-end="url(#se_marker_end_svg_18)" se:connector="svg_5 svg_8" fill="none" stroke-width="2" stroke="#000000" points="264.593 137 231.813 156 199.033 175" id="svg_18"/>
+  <polyline marker-end="url(#se_marker_end_svg_21)" se:connector="svg_6 svg_11" fill="none" stroke-width="2" stroke="#000000" points="302.93 127 302.93 284" id="svg_21"/>
+  <polyline marker-end="url(#se_marker_end_svg_20)" se:connector="svg_5 svg_7" fill="none" stroke-width="2" stroke="#000000" points="353.122 137 410.061 166" id="svg_20"/>
+  <polyline marker-end="url(#se_marker_end_svg_19)" se:connector="svg_5 svg_2" fill="none" stroke-width="2" stroke="#000000" points="302.93 90 302.93 63" id="svg_19"/>
+  <polyline marker-end="url(#se_marker_end_svg_18)" se:connector="svg_5 svg_8" fill="none" stroke-width="2" stroke="#000000" points="264.593 137 199.033 175" id="svg_18"/>
   <g id="svg_13">
    <rect id="svg_7" height="47" width="229" y="171.5" x="352.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke="#000000" fill="#bfbfbf"/>
    <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_9" y="202" x="463" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">Mocking</text>
@@ -200,7 +220,7 @@
   </g>
   <g id="svg_15">
    <rect id="svg_11" height="47" width="229" y="289.5" x="187.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke="#000000" fill="#bfbfbf"/>
-   <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_12" y="320" x="299" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">C# &amp; ASP.NET</text>
+   <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_12" y="320" x="299" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">weitere Artefakte</text>
   </g>
   <g id="svg_16">
    <rect id="svg_5" height="47" width="229" y="89.5" x="191.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke="#000000" fill="#bfbfbf"/>
@@ -208,13 +228,13 @@
   </g>
   <g id="svg_17">
    <rect id="svg_2" height="47" width="229" y="12" x="191" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke="#000000" fill="#c4c4c4"/>
-   <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_4" y="42" x="303" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">DSL</text>
+   <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_4" y="42" x="303" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#000000" fill="#000000">Modell</text>
   </g>
  </g>
 </svg>
     </div>
     
-	<div class="step slide" data-x="0" data-y="2500" data-scale="1">
+	<div class="step slide count" data-x="0" data-y="2500" data-scale="1">
 		<ul>
 			<li>Bereitstellung eines Extension Points</li>
 			<li>Ändern des BuilderParticipant von Xtext</li>
@@ -222,109 +242,105 @@
 		</ul>
     </div>
 	
-	<div class="step" data-x="1000" data-y="2500" data-scale="1">
+	<div class="step count" data-x="1000" data-y="2500" data-scale="1">
 		<img src="img/eclipse-generator-dialog.png" width="700"/>
     </div>
 
-	<div class="step" data-x="-2500" data-y="3500" data-scale="1">
-		<b>Generatoren</b>
-    </div>
-
-	<div class="step" data-x="-2500" data-y="3500" data-scale="1">
+	<div class="step count" data-x="-2500" data-y="3500" data-scale="1">
 		<b>Mocking</b>
     </div>
 	
-	<div class="step" data-x="-1500" data-y="3500" data-scale="1">
+	<div class="step count" data-x="-1500" data-y="3500" data-scale="1">
 		<img src="img/mocking.png" width="850"/>
     </div>
 	
-	<div class="step" data-x="0" data-y="3500" data-scale="1">
+	<div class="step count" data-x="0" data-y="3500" data-scale="1">
 		<b>Function Point-Analyse</b>
     </div>
 	
-	<div class="step" data-x="1000" data-y="3500" data-scale="1">
+	<div class="step count" data-x="1000" data-y="3500" data-scale="1">
 		<img src="img/fpa.png" width="800"/>
     </div>
 	
-	<div class="step" data-x="-2500" data-y="4500" data-scale="1">
+	<div class="step count" data-x="-2500" data-y="4500" data-scale="1">
 		<b>Anpassung der Entwicklungsumgebung</b>
     </div>
 
-	<div class="step" data-x="-1500" data-y="4500" data-scale="1">
+	<div class="step count" data-x="-1500" data-y="4500" data-scale="1">
 		<b>Validierung</b>
     </div>
 	
-	<div class="step" data-x="0" data-y="4500" data-scale="1">
+	<div class="step count" data-x="0" data-y="4500" data-scale="1">
 		<img src="img/validation-duplicate-attribute-name.png" width="850"/>
     </div>
 
 		
-	<div class="step" data-x="1000" data-y="4500" data-scale="1">
+	<div class="step count" data-x="1000" data-y="4500" data-scale="1">
 		<b>Outlining</b>
     </div>
 	
-	<div class="step" data-x="2000" data-y="4500" data-scale="1">
+	<div class="step count" data-x="2000" data-y="4500" data-scale="1">
 		<img src="img/outlining.png" width="400"/>
     </div>
 		
-	<div class="step" data-x="3000" data-y="4500" data-scale="1">
+	<div class="step count" data-x="3000" data-y="4500" data-scale="1">
 		<b>Formatting</b>
     </div>
 
-	<div class="step" data-x="-2500" data-y="5500" data-scale="1">
+	<div class="step count" data-x="-2500" data-y="5500" data-scale="1">
 		<b>Quickfixes</b>
     </div>
 
-	<div class="step" data-x="-1500" data-y="5500" data-scale="1">
+	<div class="step count" data-x="-1500" data-y="5500" data-scale="1">
 		<p>Automatisches Erstellen von Prozessen</p>
 		<img src="img/quickfix-cruds.png" />
     </div>
 
-	<div class="step" data-x="-1500" data-y="5500" data-z="-1500" data-scale="1">
+	<div class="step count" data-x="-1500" data-y="5500" data-z="-1500" data-scale="1">
 		<img src="img/quickfix-cruds-result.png" width="600"/>
     </div>
 
 	
-	<div class="step" data-x="0" data-y="5500" data-scale="1">
+	<div class="step count" data-x="0" data-y="5500" data-scale="1">
 		<p>Erstellen von fehlenden Entitäten</p>
 		<img src="img/quickfix-create-domain.png" width="800" />
     </div>
 
-	<div class="step" data-x="0" data-y="5500" data-z="-1500" data-scale="1">
+	<div class="step count" data-x="0" data-y="5500" data-z="-1500" data-scale="1">
 		<img src="img/quickfix-create-domain-result.png" width="600"/>
 		<p>Domäne <em>Thread</em> wurde hinzugefügt</p>
     </div>
 	
-	<div class="step" data-x="1000" data-y="5500" data-scale="1">
+	<div class="step count" data-x="1000" data-y="5500" data-scale="1">
 		<p>Hinzufügen von neuen Datentypen</p>
 		<img src="img/quickfix-change-datatype.png" width="800" />
     </div>
 	
-	<div class="step" data-x="1000" data-y="5500" data-z="-1500" data-scale="1">
+	<div class="step count" data-x="1000" data-y="5500" data-z="-1500" data-scale="1">
 		<img src="img/quickfix-change-datatype-result.png" width="600"/>
 		<p>Datentyp <em>Guid</em> wurde hinzugefügt</p>
     </div>
 	
-	<div class="step" data-x="2000" data-y="5500" data-scale="1">
+	<div class="step count" data-x="2000" data-y="5500" data-scale="1">
 		<p>Einführen einer Assoziationsdomäne</p>
 		<img src="img/quickfix-introduce-assoc-table.png" width="900"/>
     </div>
 		
-	<div class="step" data-x="2000" data-y="5500" data-z="-1500" data-scale="1">
+	<div class="step count" data-x="2000" data-y="5500" data-z="-1500" data-scale="1">
 		<img src="img/quickfix-introduce-assoc-table-result.png" width="800"/>
 		<p>Assoziationsdomäne wurde generiert</p>
     </div>
 	
-	<div class="step slide" data-x="3000" data-y="6500" data-scale="1">
+	<div class="step slide count" data-x="3000" data-y="6500" data-scale="1">
 		<h1>Weitere Features</h1>
 		<ul>
 			<li>Assistenten zum Generieren von eigenen Generatoren</li>
 			<li>Support für Annotationen zur Erweiterung der Sprache</li>
-			<li>Experimenteller Graph-Viewer zum Visualieren der Beziehungen</li>
+			<li>Experimenteller Graph-Viewer zum Visualisieren der Beziehungen</li>
 		</ul>
 	</div>
 	
-	<div class="step slide" data-x="-1500" data-y="6500" data-scale="1">
+	<div class="step slide count" data-x="-1500" data-y="6500" data-scale="1">
 		<h1>Trivia</h1>
 		<ul>
 			<li>Survey-DSL</li>
@@ -333,7 +349,7 @@
 		</ul>
     </div>
 
-	<div class="step slide" data-x="0" data-y="6500" data-z="1000" data-scale="1">
+	<div class="step slide count" data-x="0" data-y="6500" data-z="1000" data-scale="1">
 		<h1>Ergebnis</h1>
 		<ul>
 			<li>Implementierung einer Xtext-basierten DSL</li>
@@ -343,19 +359,48 @@
 		</ul>
     </div>
 	
+	<div class="step" data-x="1000" data-y="6500" data-z="1000" data-scale="1">
+			<h1>Danke für die Aufmerksamkeit!</h1>
+	</div>
+	
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
     </div>
 </div>
+<div id="pagecounter">asdad
+</div>
+
 <!--
 <div class="hint">
     <p>Use a spacebar or arrow keys to navigate</p>
 </div>
-<script>
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
-</script>
 -->
+<script>$('.step').on('impress:stepenter', function(event) {
+	var slide = $(event.target)
+	var content = ""
+
+	if (slide.hasClass('count')) {
+		var total = $('div.count');
+
+		if (slide.hasClass('slide')) {
+			var current = "?"
+			for (var i = 0; i < total.length; i++) {
+				console.log($(total[i]));
+				console.log(slide);
+				console.log("----");
+				if (slide.is($(total[i]))) {
+					current = ++i;
+					break;
+				}
+			}
+			
+			content = current + " / " + total.length;
+		}
+	}
+	
+	$('#pagecounter').html(content)
+});
+
+</script>
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
 </body>
